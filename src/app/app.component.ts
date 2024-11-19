@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SobreNosotrosComponent} from './sobre-nosotros/sobre-nosotros.component';
 import { FooderComponent } from './fooder/fooder.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,SobreNosotrosComponent,FooderComponent],
+  imports: [RouterOutlet,SobreNosotrosComponent,FooderComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
