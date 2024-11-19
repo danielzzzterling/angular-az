@@ -4,27 +4,30 @@ $text-color: #ffffff;
 $border-color: #ffffff;
 $background-color: #000000;
 
-.container{
-  height: 1000px;
-  width: auto;
-  display: flex;
-align-items: center;
-  justify-content: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.contenedor-cards{
+  border: 2px solid rgb(255, 255, 255);
 }
 
 .row{
   padding: 12px;
-  background-color: black;
- 
+  background-color:black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+.Title{
+  color: $text-color;
+
 }
 .card {
+
   background-color: $background-color;
   border: 2.5px solid $border-color;
-  cursor: pointer;
   padding: 1.5rem;
   width: 300px;
-  text-align: center;
+  
+  
 }
 
 .card-title {
@@ -37,11 +40,8 @@ align-items: center;
 .card-text {
   font-size: 1rem;
   color: $text-color;
-  line-height: 1.5;
+  display: flex;
+  text-align: center;
 }
 
-.card:hover {
-  border-color: $primary-color;
-  transition: all 10s ;
-}
- 
+

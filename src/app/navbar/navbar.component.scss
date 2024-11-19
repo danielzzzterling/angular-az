@@ -1,0 +1,67 @@
+
+$font-title: 'DM Serif Display", serif;';
+
+  
+
+
+nav{
+
+    display: flex;
+    align-items: center;
+    
+    transition: background-color 0.8s ease;
+    
+    
+    
+    &:hover{
+        background-color: burlywood;
+    }
+        
+
+    .logo-nav{
+        margin: 15px 15px 15px 40px;
+        
+        a{
+            text-decoration: none;
+            font-weight: bolder;
+            color: #ffff;
+            font-size: 40px;
+            font-family:$font-title;
+
+        }
+     }
+
+    .link-section{
+    
+    
+    a {
+        text-decoration: none;
+        color:#ffff;
+        font-size: 16px;
+        font-weight: bolder;
+        transition: 0.3s ease;
+        
+        
+         
+        &:hover{
+            color:grey;
+            
+            
+        }    
+    
+        .icons-custom:hover{
+        
+            color: black;
+
+        }
+
+    }
+
+
+   
+
+    }
+    
+     }
+ 
+        
