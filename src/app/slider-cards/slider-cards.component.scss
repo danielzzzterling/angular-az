@@ -1,7 +1,53 @@
+
+.container{
+    background-color: black;
+
+}
+
+.carousel-item {
+    padding: 40px ;
+    padding-top: 35px;
+}
+
 .carousel-control-prev{
-width: 5%; right: -60px; z-index: 2; background-color: #007bff; color: white; border-radius: 50%;
+width: 15%; 
+right: -60px; 
+z-index: 2; 
+color: rgb(0, 0, 0); 
+border-radius: 50%;
 }
 
 .carousel-control-next{
-  width: 5%; right: -60px; z-index: 2; background-color: #007bff; color: white; border-radius: 50%;
+  width: 15%; 
+  right: -60px;
+   z-index: 2; 
+   color: rgb(0, 0, 0);
+    border-radius: 50%;
 }
+
+::ng-deep .custom-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    z-index: 10;
+  
+    // Transiciones suaves para el hover
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  ::ng-deep .carousel-control-prev.custom-control {
+    left: -3rem;
+  }
+  
+  ::ng-deep .carousel-control-next.custom-control {
+    right: -3rem;
+  }
+  
+  // Cambia el color del ícono al pasar el cursor
+  ::ng-deep .custom-control:hover {
+    color: #007bff; /* Cambia este color según tus necesidades */
+  }
