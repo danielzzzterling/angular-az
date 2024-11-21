@@ -1,6 +1,9 @@
 import { Routes } from '@angular/router';
-import { CamisetasComponent } from './layouts/product-list/camisetas.component';
+import { HomeComponent } from './core/home/home.component';
+import { ProductListComponent } from './layouts/product-list/product-list.component';
 
 export const routes: Routes = [
-    { path: 'camisetas', component: CamisetasComponent },
+    { path: '', component: HomeComponent },
+    { path: 'product-list', component: ProductListComponent },
+    { path: '**', redirectTo: ''},
 ]; 
