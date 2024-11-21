@@ -6,15 +6,24 @@ $font-title: 'DM Serif Display", serif;';
 
 nav{
 
+    position: absolute;
+    top:0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    padding: 10px 20px;
     
     transition: background-color 0.8s ease;
     
     
     
+    
     &:hover{
-        background-color: burlywood;
+        background-color: rgb(0, 0, 0);
     }
         
 
