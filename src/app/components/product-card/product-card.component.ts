@@ -13,6 +13,6 @@ export class ProductCardComponent {
   @Input() titulo: string= '';
   @Input() texto: string= '';
   @Input() imagen: string= '';
-  @Input() id: number = 0;
+  @Input() urlSlug: string = '';
   
 }

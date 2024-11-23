@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { CustomersService } from '../../../services/customers-services';
 
 
 @Component({
@@ -7,17 +8,26 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './detail-product.component.html',
-  styleUrl: './detail-product.component.scss'
+  styleUrl: './detail-product.component.scss',
+  providers: [CustomersService]
 })
 export class DetailProductComponent {
-  productId: number | null = null;
+  productUrlSlug: string = '';
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private customersService: CustomersService) {
 
+  }
   ngOnInit(): void {
+    this.customersService.getCustomers().subscribe({
+      next: (customerElement)=>{
+        console.log(customerElement)
+      },
+      complete:()=>{},
+      error: (e)=>{}
+    })
     // Capturar el ID desde la URL
-    this.productId = Number(this.route.snapshot.paramMap.get('id'));
-    console.log('Producto ID:', this.productId);
+    this.productUrlSlug = this.route.snapshot.paramMap.get('urlSlug')!;
+    console.log('Producto ID:', this.productUrlSlug);
 
     // Puedes usar el ID para buscar el producto en un servicio o mostrar detalles
   }};

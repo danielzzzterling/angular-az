@@ -7,6 +7,6 @@ export const routes: Routes = [
     { path: '', component: HomeComponent },
 
     { path: 'product-list', component: ProductListComponent },
-    { path: 'detail-product/:id', component: DetailProductComponent},
+    { path: 'detail-product/:urlSlug', component: DetailProductComponent},
     { path: '**', redirectTo: ''},
 ]; 
