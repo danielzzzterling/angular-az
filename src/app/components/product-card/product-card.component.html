@@ -1,8 +1,11 @@
-<div class="card" style="width: 18rem;">
+<div class="content">
+<div class="card">
     <img [src]="imagen" class="card-img-top" alt="Imagen de {{ titulo }}">
     <div class="card-body">
       <h5 class="card-title fw-bold">{{ titulo }}</h5>
       <p class="card-text">{{ texto }}</p>
-      <a [href]="enlace" class="btn btn-success d-flex justify-content-center align-items-center" >Detalles del producto</a>
+      <a [routerLink]="['/detail-product', id]" class="btn btn-success d-flex justify-content-center align-items-center" >Detalles del producto</a>
     </div>
   </div>
+
+</div>  
