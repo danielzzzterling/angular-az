@@ -13,22 +13,23 @@ export class ProductListComponent {
 
     productos = [
       {
+        id: 1,
         titulo: 'Producto 1',
         texto: 'Descripción del producto 1.',
         imagen: 'https://via.placeholder.com/150',
-        enlace: '#'
+        
       },
       {
+        id: 2,
         titulo: 'Producto 2',
         texto: 'Descripción del producto 2.',
         imagen: 'https://via.placeholder.com/150',
-        enlace: '#'
       },
       {
+        id: 3,
         titulo: 'Producto 3',
         texto: 'Descripción del producto 3.',
         imagen: 'https://via.placeholder.com/150',
-        enlace: '#'
       }
     ];
   }
