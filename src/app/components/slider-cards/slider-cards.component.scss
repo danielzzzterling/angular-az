@@ -1,55 +1,46 @@
 .fondo{
-  background-color: black;
+  background-color: rgb(118, 118, 118);
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
 }
-.container{
-    background-color: black;
+h2{
+  color: black;
+}
 
-}
 
 .carousel-item {
-    padding: 40px ;
-    padding-top: 35px;
+    padding: 80px ;
+    padding-top: 55px;
 }
 
-.carousel-control-prev{
-width: 15%; 
-right: -60px; 
-z-index: 2; 
-color: rgb(0, 0, 0); 
-border-radius: 50%;
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-40%);
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.4s ease-in-out;
+
+  &.carousel-control-prev {
+    left: 20px;
+  }
+
+  &.carousel-control-next {
+    right: 20px;
+  }
+
+  i {
+    color: rgb(0, 0, 0); 
+    font-size: 40px; 
+    transition: transform 0.3s ease-in-out; 
+  }
 }
 
-.carousel-control-next{
-  width: 15%; 
-  right: -60px;
-   z-index: 2; 
-   color: rgb(0, 0, 0);
-    border-radius: 50%;
-}
-
-::ng-deep .custom-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: black;
-    background-color: transparent;
-    border: none;
-    font-size: 2rem;
-    z-index: 10;
-  
-    // Transiciones suaves para el hover
-    transition: color 0.3s ease, background-color 0.3s ease;
-  }
-  
-  ::ng-deep .carousel-control-prev.custom-control {
-    left: -3rem;
-  }
-  
-  ::ng-deep .carousel-control-next.custom-control {
-    right: -3rem;
-  }
-  
-  // Cambia el color del ícono al pasar el cursor
-  ::ng-deep .custom-control:hover {
-    color: #007bff; /* Cambia este color según tus necesidades */
-  }
