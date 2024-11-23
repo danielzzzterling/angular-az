@@ -17,7 +17,6 @@ export class DetailProductComponent {
   constructor(private route: ActivatedRoute, private customersService: CustomersService) {
 
   }
-
   ngOnInit(): void {
     this.customersService.getCustomers().subscribe({
       next: (customerElement)=>{
@@ -31,6 +30,5 @@ export class DetailProductComponent {
     console.log('Producto ID:', this.productUrlSlug);
 
     // Puedes usar el ID para buscar el producto en un servicio o mostrar detalles
-  }
+  }};
 
-}
