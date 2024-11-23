@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div class="row">
-    <div *ngFor="let producto of productos" class="col-md-4">
+    <div *ngFor="let producto of products" class="col-md-4">
       <app-product-card 
       [titulo]="producto.titulo" 
       [texto]="producto.texto" 
       [imagen]="producto.imagen" 
-      [id]="producto.id">
+      [urlSlug]="producto.urlSlug">
     </app-product-card>
   </div>
 </div>
