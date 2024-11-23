@@ -1,1 +1,12 @@
 <p>product-list works!</p>
+
+<div class="row">
+    <div *ngFor="let producto of productos" class="col-md-4">
+      <app-product-card 
+        [titulo]="producto.titulo" 
+        [texto]="producto.texto" 
+        [imagen]="producto.imagen" 
+        [enlace]="producto.enlace">
+      </app-product-card>
+    </div>
+  </div>
