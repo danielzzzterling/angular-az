@@ -1,120 +1,17 @@
 <div class="fondo">
-<div class="">
+    <h2 class="text-center mt-5 mb-3 fw-bold fst-italic">¡PRODUCTOS DESTACADOS DE LA TIENDA!</h2>
     <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
         <div class="carousel-inner">
-            <h2 class="text-center mt-5 mb-3 fw-bold fst-italic">¡PRODUCTOS DESTACADOS DE LA TIENDA!</h2>
             <!-- Slide 1 -->
-            <div class="carousel-item active">
+            <div *ngFor="let card of cards; let i= index" class="carousel-item active" [ngClass]="{'active': i=== 0}">
                 <div class="row g-3 text-center">
                     <div class="col-md-3">
                         <div class="card">
-                            <img src="./assets/images/banneraz.png" class="card-img-top" alt="Card 1">
+                            <img [src]="card.imgUrl" class="card-img-top" [alt]="card.title">
                             <div class="card-body">
-                                <h5 class="card-title fw-bold fst-italic">Camiseta Monastery</h5>
-                                <p class="card-text">Description 1</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="./assets/images/banner1.png" class="card-img-top" alt="Card 2">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold fst-italic">Card 2</h5>
-                                <p class="card-text">Description 2</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="./assets/images/banner1.png" class="card-img-top" alt="Card 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 3</h5>
-                                <p class="card-text">Description 3</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="./assets/images/banner1.png" class="card-img-top" alt="Card 4">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 4</h5>
-                                <p class="card-text">Description 4</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="row g-3 text-center">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="./assets/images/banner1.png" class="card-img-top" alt="Card 5">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 5</h5>
-                                <p class="card-text">Description 5</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="./assets/images/banner1.png" class="card-img-top" alt="Card 6">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 6</h5>
-                                <p class="card-text">Description 6</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="./assets/images/banner1.png" class="card-img-top" alt="Card 7">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 7</h5>
-                                <p class="card-text">Description 7</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="./assets/images/banner1.png" class="card-img-top" alt="Card 8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 8</h5>
-                                <p class="card-text">Description 8</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <div class="row g-3 text-center">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="./assets/images/banner1.png" class="card-img-top" alt="Card 9">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 9</h5>
-                                <p class="card-text">Description 9</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="./assets/images/banner1.png" class="card-img-top" alt="Card 10">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 10</h5>
-                                <p class="card-text">Description 10</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title fw-bold fst-italic"> {{card.title}} </h5>
+                                <p class="card-text"> {{card.description}} </p>
+                                <a href="#" class="btn btn-primary">{{card.buttonText}} </a>
                             </div>
                         </div>
                     </div>
@@ -132,5 +29,5 @@
         </button>
     </div>
 </div>
-</div>
+
 

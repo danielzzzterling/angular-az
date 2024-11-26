@@ -7,12 +7,21 @@
         <div class="link-section position-absolute gap-3" style="right: 400px;">
             
             <a class="m-3" href="/product-list" >CAMISETAS</a>
-            <a class="m-3"href="/Bolsos/bolsos.html" >BOLSOS UNISEX</a>
-            <a class="m-3"href="/Sobre_Nosotros/nosotros.html" >NOSOTROS</a>
-            <a class="m-3"href="#gorras">GORRAS</a>
-            <a class="m-3"href="accesorios">ACCESORIOS</a>
-            
+            <a class="m-3"href="/Bolsos/bolsos.html" >BOLSOS</a>
+            <a class="m-3"href="/Sobre_Nosotros/nosotros.html" >GORRAS </a>
+            <a class="m-3"href="#gorras">NOSOTROS</a>
+
+            <div class="dropdown m-3" (mouseover)="showDropdown = true" (mouseleave)="showDropdown = false">
+                <a class="m-3"href="accesorios">ACCESORIOS</a>
+                <div *ngIf="showDropdown" class="dropdown-menu">
+                    <a href="#">Perfumeria</a>
+                    <a href="#">Relojería</a>
+                    <a href="#">Gafas</a>
+                    <a href="#">Correas</a>
+                </div>
+            </div>
         </div>
+            
 
         <div class="icons-nav  position-absolute  m-3 "  style="right: 305px; top: 10px;">
         <button class="bi bi-person-circle btn fs-3  text-white"></button>          
