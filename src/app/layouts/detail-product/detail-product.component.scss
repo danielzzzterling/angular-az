@@ -1,5 +1,12 @@
 .details-product {
     padding: 20vh;
+
+    .img{
+      width:400px;
+      height: auto;
+  }
+}
+
     .product-title {
       font-size: 2rem;
       font-weight: bold;
@@ -36,5 +43,5 @@
         color: white;
       }
     }
-  }
+  
   

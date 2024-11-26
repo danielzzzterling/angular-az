@@ -1,11 +1,18 @@
 
-<div class="container">
+<div class="container mb-5">
 
   
   
+<div class="title-container">
+
+  
+
+</div>
+
+
   <div class="container-fluid">
     <div class="row">
-      <div *ngFor="let product of productList" class="col-md-4">
+      <div *ngFor="let product of productList" class="col-md-3">
       <app-product-card 
       [product]="product">
     </app-product-card>
