@@ -4,14 +4,20 @@ $text-color: #ffffff;
 $border-color: #ffffff;
 $background-color: #000000;
 
-
-
-
 .row{
 height: 600px;
   background-color:black;
   border-bottom: 1px solid #ffffff;
  
+}
+
+h2{
+  text-align: center;         
+  color: #333;                  
+  margin-top: 60px;              
+  margin-bottom: 10px;            
+  font-size: 2rem;                
+  
 }
 
 .Title{
