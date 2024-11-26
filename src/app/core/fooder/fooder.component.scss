@@ -11,12 +11,19 @@ footer {
     gap: 90px;              
     max-width: 1200px;     
     margin: 0 auto;    
+    font-size: 15px;
   }
 
   .footer-left, .footer-center, .footer-right {
     flex: 1;   
-    left: 50px;                      
+    left: 50px;     
+                    
   }
+
+  .footer-left, .footer-center, .footer-right h4{
+    font-size: 15px;
+  }
+ 
 
   .footer-center{
     display: flex;                
@@ -25,7 +32,7 @@ footer {
   }
 
   .footer-center h4{
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 8px;
   }
 
@@ -59,7 +66,7 @@ footer {
     margin-top: 20px;  
 
     hr {
-      border: 3px solid #ffffff;        
+      border: 1px solid #ffffff;        
       margin: 10px 0;  
       opacity: 1;               
     }
@@ -81,8 +88,8 @@ footer {
     text-decoration: none;           
     padding: 10px;                  
     border-radius: 50%;
-    width: 50px;
-    height: 50px;             
+    width: 45px;
+    height: 45px;             
     transition: all 0.3s ease;      
   
     // Estilos para cada red social
