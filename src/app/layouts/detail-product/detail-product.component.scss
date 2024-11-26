@@ -21,11 +21,19 @@
       }
     }
   
-    button {
-      background-color: #007bff;
+    a {
+      display: flex;
+      justify-content: center;
+      margin: 0 !important;
+      width: 200px;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: green;
+      color: rgb(42, 196, 3);
       border: none;
       &:hover {
-        background-color: #0056b3;
+        background-color:rgb(2, 139, 2);
+        color: white;
       }
     }
   }

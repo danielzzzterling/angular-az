@@ -1,10 +1,11 @@
 <div class="content">
 <div class="card">
-    <img [src]="imagen" class="card-img-top" alt="Imagen de {{ titulo }}">
+     <img [src]="'./assets/images/'+product.image_url" class="card-img-top" alt="Imagen de {{ product.product_name }}"> 
     <div class="card-body">
-      <h5 class="card-title fw-bold">{{ titulo }}</h5>
-      <p class="card-text">{{ texto }}</p>
-      <a [routerLink]="['/detail-product', urlSlug]" class="btn btn-success d-flex justify-content-center align-items-center" >Detalles del producto</a>
+      <h5 class="card-title fw-bold">{{ product.product_name }}</h5>
+      <p class="card-text">{{ product.description }}</p>
+      <p class="card-text">{{ product.price }}</p>
+      <a [routerLink]="['/detail-product', product.urlSlug]" class="btn btn-success d-flex justify-content-center align-items-center" >Detalles del producto</a>
     </div>
   </div>
 

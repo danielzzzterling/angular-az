@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { CustomersService } from '../../../services/customers-services';
+import { ProductsService } from '../../../services/products.service';
+import { Product } from '../product-list/product-list.component';
 
 
 @Component({
@@ -9,26 +10,31 @@ import { CustomersService } from '../../../services/customers-services';
   imports: [RouterModule],
   templateUrl: './detail-product.component.html',
   styleUrl: './detail-product.component.scss',
-  providers: [CustomersService]
+  providers: [ProductsService]
 })
 export class DetailProductComponent {
-  productUrlSlug: string = '';
 
-  constructor(private route: ActivatedRoute, private customersService: CustomersService) {
+
+  productUrlSlug: string = '';
+  productData: Product = {} as Product 
+
+  constructor(private route: ActivatedRoute, private productsService: ProductsService) {
 
   }
   ngOnInit(): void {
-    this.customersService.getCustomers().subscribe({
-      next: (customerElement)=>{
-        console.log(customerElement)
+    
+    this.productUrlSlug = this.route.snapshot.paramMap.get('urlSlug')!;
+    console.log('Producto URL:', this.productUrlSlug);
+    
+    this.productsService.getProductByUrlSlug(this.productUrlSlug).subscribe({
+      next: (productElementResponsive)=>{
+        this.productData = productElementResponsive
+        console.log(productElementResponsive
+
+        )
       },
       complete:()=>{},
       error: (e)=>{}
     })
-    // Capturar el ID desde la URL
-    this.productUrlSlug = this.route.snapshot.paramMap.get('urlSlug')!;
-    console.log('Producto ID:', this.productUrlSlug);
-
-    // Puedes usar el ID para buscar el producto en un servicio o mostrar detalles
-  }};
+  }}
 

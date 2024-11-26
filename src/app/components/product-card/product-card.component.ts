@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Product } from '../../layouts/product-list/product-list.component';
 
 @Component({
   selector: 'app-product-card',
@@ -10,9 +11,6 @@ import { RouterModule } from '@angular/router';
 })
 export class ProductCardComponent {
 
-  @Input() titulo: string= '';
-  @Input() texto: string= '';
-  @Input() imagen: string= '';
-  @Input() urlSlug: string = '';
+  @Input() product: Product = {} as Product
   
 }
