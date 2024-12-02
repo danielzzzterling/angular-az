@@ -29,9 +29,7 @@ export class DetailProductComponent {
     this.productsService.getProductByUrlSlug(this.productUrlSlug).subscribe({
       next: (productElementResponsive)=>{
         this.productData = productElementResponsive
-        console.log(productElementResponsive
-
-        )
+        console.log(productElementResponsive)
       },
       complete:()=>{},
       error: (e)=>{}

@@ -6,7 +6,7 @@ import { DetailProductComponent } from './layouts/detail-product/detail-product.
 export const routes: Routes = [
     { path: '', component: HomeComponent },
 
-    { path: 'lista_de_productos/:category_id', component: ProductListComponent },
-    { path: 'detail-product/:urlSlug', component: DetailProductComponent},
+    { path: 'detalles-del-producto/:urlSlug', component: DetailProductComponent},
+    { path: 'lista-de-productos/:category_id', component: ProductListComponent },
     { path: '**', redirectTo: ''},
 ]; 

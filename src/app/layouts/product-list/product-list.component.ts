@@ -11,8 +11,8 @@ export interface Product {
   product_name: string,
   description: string,
   image_url: string,
-  price: number;
-  stock_quantity: number;
+  price: number,
+  stock_quantity: number,
   category_id: number;
 }
 
@@ -53,10 +53,11 @@ export class ProductListComponent implements OnInit{
         }
       });
     }
-  
+
     loadProducts(): void {
       this.productsService.getProducts(this.categoryId).subscribe(products => {
         this.productList = products;
+        console.log(this.productList)
         this.filteredProducts = this.productList
       });
     }
