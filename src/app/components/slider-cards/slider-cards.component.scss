@@ -1,5 +1,5 @@
 .fondo{
-  // background-color: #333;
+  background: #bcbaba8a;
   max-width: 100%;
   overflow: hidden;
   margin: 0 auto;
@@ -68,7 +68,12 @@ h2{
       }
    }
 
-
+.content-image{
+  height: 400px;
+  img{
+    height: 100%;
+  }
+}
    .card {
     max-width: 100%;
     position: relative;
@@ -120,6 +125,10 @@ h2{
                 background-color: #218838;
             }
         }
+    }
+
+    .titulo{
+      height: 70px;
     }
 
 

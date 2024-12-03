@@ -8,9 +8,13 @@
                 <div class="row g-3 text-center">
                     <div *ngFor="let card of cardGroup" class="col-md-3">
                         <div class="card">
-                            <img [src]="'./assets/images/'+card.image_url" class="card-img-top" [alt]="card.image_url">
+                            <div class="content-image">
+                                <img [src]="'./assets/images/'+card.image_url" class="card-img-top" [alt]="card.image_url">
+                            </div>
                             <div class="card-body">
-                                <h5 class="card-title fw-bold fst-italic"> {{card.product_name}} </h5>
+                                <div class="titulo">
+                                    <h5 class="card-title fw-bold fst-italic"> {{card.product_name}} </h5>
+                                </div>
                                 <a [routerLink]="['/detalles-del-producto',card.urlSlug]" class="btn btn-primary"> Comprar ahora </a>
                              
                             </div>
