@@ -1,7 +1,14 @@
+
+
 .details-product {
     padding: 20vh;
+    margin-bottom: 0px !important;
+    
 
-    .img{
+    .img-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width:400px;
       height: auto;
   }
@@ -28,19 +35,26 @@
       }
     }
   
+
+  .link-container{
+    display: flex;
+    justify-content: center;
+  }
+    
     a {
       display: flex;
       justify-content: center;
-      margin: 0 !important;
+      margin-top: 35px;
       width: 200px;
       font-size: 14px;
       font-weight: bold;
       background-color: green;
-      color: rgb(42, 196, 3);
+      color: white;
       border: none;
       &:hover {
-        background-color:rgb(2, 139, 2);
+        background-color:rgb(1, 170, 1);
         color: white;
+        
       }
     }
   

@@ -13,7 +13,8 @@ export interface Product {
   image_url: string,
   price: number,
   stock_quantity: number,
-  category_id: number;
+  category_id: number,
+  status: string;
 }
 
 @Component({
