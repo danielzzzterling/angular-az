@@ -8,11 +8,12 @@ import { Product } from '../app/layouts/product-list/product-list.component';
 })
 export class ProductsService {
   private baseUrl = 'https://0s3dr1p5-10000.use.devtunnels.ms/products'; 
-
+  // private baseUrl = 'http://127.0.0.1:10000/products'; 
+  
   constructor(private http: HttpClient) {}
 
   // Obtener todos los productos
-  getProducts(category_id?: string): Observable<any[]> {
+  getProducts(category_id?: string): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.baseUrl}${category_id ? '?category_id='+category_id : ''}`);
   }
 
