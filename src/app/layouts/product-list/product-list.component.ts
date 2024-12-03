@@ -27,16 +27,10 @@ export interface Product {
 })
 export class ProductListComponent implements OnInit{
   
-
-  
   productList: Product[] = []
   filteredProducts: Product[] = [];
   categoryId: string = ''
 
-  
-  
-
-  
     constructor(private productsService: ProductsService, private route: ActivatedRoute) { }
   
     ngOnInit() {
