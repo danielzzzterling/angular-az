@@ -3,7 +3,11 @@
      <img [src]="'./assets/images/'+product.image_url" class="img-container" style="border-radius:8px;" alt="Imagen de {{ product.product_name }}"> 
     <div class="card-body">
       <h5 class="card-title fw-bold">{{ product.product_name }}</h5>
-      <p class="status" style="color: green;"><b> {{product.status}} </b></p>
+
+      <div class="info-product">
+
+        <p class="status" style="color: green;"><b> {{product.status}} </b></p>
+      </div>
       <p class="card-text"> <b>{{ product.price }}</b></p>
       <a [routerLink]="['/detalles-del-producto', product.urlSlug]" class="btn d-flex justify-content-center align-items-center" >Detalles del producto</a>
     </div>
