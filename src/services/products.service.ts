@@ -7,8 +7,8 @@ import { Product } from '../app/layouts/product-list/product-list.component';
   providedIn: 'root',
 })
 export class ProductsService {
-  // private baseUrl = 'https://0s3dr1p5-10000.use.devtunnels.ms/products'; 
-  private baseUrl = 'http://127.0.0.1:10000/products'; 
+  private baseUrl = 'https://0s3dr1p5-10000.use.devtunnels.ms/products'; 
+  // private baseUrl = 'http://127.0.0.1:10000/products'; 
   
   constructor(private http: HttpClient) {}
 
