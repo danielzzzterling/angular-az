@@ -14,10 +14,10 @@
             <div class="dropdown m-3" (mouseover)="showDropdown = true" (mouseleave)="showDropdown = false">
                 <a class="m-3"href="accesorios">ACCESORIOS</a>
                 <div *ngIf="showDropdown" class="dropdown-menu">
-                    <a href="#">Perfumeria</a>
-                    <a href="#">Relojería</a>
-                    <a href="#">Gafas</a>
-                    <a href="#">Correas</a>
+                    <a href="/lista-de-productos/perfumeria">Perfumeria</a>
+                    <a href="/lista-de-productos/relojeria">Relojería</a>
+                    <a href="/lista-de-productos/gafas">Gafas</a>
+                    <a href="/lista-de-productos/correas">Correas</a>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
 
         <form class="d-flex position-absolute" role="search" style="right: 30px;">
           <input class="form-control me-2" type="search" placeholder="¡Busca tus productos!" aria-label="Search">
-          <button class="btn btn-outline-success " type="submit">Buscar</button>
+          <button class="btn btn-outline-secondary " type="submit">Buscar</button>
         </form> 
         
         

@@ -1,20 +1,25 @@
 <div class="fondo">
-    <h2 class="text-center mt-5 mb-3 fw-bold fst-italic">¡PRODUCTOS DESTACADOS DE LA TIENDA!</h2>
+    <h2 class="text-center mt-5 mb-3 fw-bold fst-italic fs-3">¡PRODUCTOS DESTACADOS DE LA TIENDA!</h2>
     <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
         <div class="carousel-inner">
             <!-- Slide 1 -->
-            <div *ngFor="let card of cards; let i= index" class="carousel-item active" [ngClass]="{'active': i=== 0}">
+            <div *ngFor="let cardGroup of productsGrouped; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+            <!-- <div *ngFor="let card of products; let i= index" class="carousel-item active" [ngClass]="{'active': i === 0}"> -->
                 <div class="row g-3 text-center">
-                    <div class="col-md-3">
+                    <div *ngFor="let card of cardGroup" class="col-md-3">
                         <div class="card">
-                            <img [src]="card.imgUrl" class="card-img-top" [alt]="card.title">
+                            <div class="content-image">
+                                <img [src]="'./assets/images/'+card.image_url" class="card-img-top" [alt]="card.image_url">
+                            </div>
                             <div class="card-body">
-                                <h5 class="card-title fw-bold fst-italic"> {{card.title}} </h5>
-                                <p class="card-text"> {{card.description}} </p>
-                                <a href="#" class="btn btn-primary">{{card.buttonText}} </a>
+                                <div class="titulo">
+                                    <h5 class="card-title fw-bold fst-italic"> {{card.product_name}} </h5>
+                                </div>
+                                <a [routerLink]="['/detalles-del-producto',card.urlSlug]" class="btn btn-primary"> Comprar ahora </a>
+                             
                             </div>
                         </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>

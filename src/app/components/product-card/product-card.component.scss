@@ -4,21 +4,55 @@
 
 .card{
     border-radius:15px;
-    width: 15rem;
-    height: 510px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.5),
-                0 4px 6px rgba(0, 0, 0, 0.9); 
-    
-    transition: box-shadow 0.3s ease;
+    width: 16rem;
+    height: 455px;
     margin-top: 50px;
-    
-
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.5),
+                0 4px 6px rgba(0, 0, 0, 0.9);
+    transition: box-shadow 0.3s ease;
 
     &:hover{
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .img{
+    img{
+        display: flex;
+        
         border-radius:15px;
+        width: 15.9rem !important;
+        height: 230px !important;
     }
+
+    
+
+    .status{
+        position:absolute;
+        bottom: 78px;
+        
+    }
+     .card-text{
+        position:absolute;
+        bottom: 55px;
+        
+    }
+    
+
 }
+
+
+
+
+    a{
+        position: absolute;
+        bottom: 25px;
+        right: 33px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+       
+        
+      &:hover {
+        background-color:rgb(46, 46, 46);
+        color: white;
+    }
+  }
