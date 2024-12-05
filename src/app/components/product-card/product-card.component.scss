@@ -1,18 +1,15 @@
 
-
-
-
 .card{
     border-radius:15px;
     width: 16rem;
     height: 455px;
-    margin-top: 50px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.5),
-                0 4px 6px rgba(0, 0, 0, 0.9);
+    margin: 50px auto 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.3s ease;
-
+    
     &:hover{
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.5),
+                    0 4px 6px rgba(0, 0, 0, 0.9);
     }
 
     img{
