@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../../services/products.service';
-import { error } from 'console';
 import { Product } from '../../layouts/product-list/product-list.component';
 import { RouterModule } from '@angular/router';
 
