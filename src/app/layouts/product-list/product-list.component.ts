@@ -34,14 +34,12 @@ export class ProductListComponent implements OnInit{
     constructor(private productsService: ProductsService, private route: ActivatedRoute) { }
   
     ngOnInit() {
-      console.log('entro')
       this.route.paramMap.subscribe(params => {
         const categoryIdParam = params.get('category_id');
         
         // Asegúrate de que categoryIdParam tenga un valor y convertirlo a número
         if (categoryIdParam) {
           this.categoryId = categoryIdParam;  // El signo '+' convierte a número
-          console.log('Category ID from URL:', this.categoryId);  // Verifica el valor
           this.loadProducts();
         } else {
           console.error('categoryID not found in URL');
@@ -52,7 +50,6 @@ export class ProductListComponent implements OnInit{
     loadProducts(): void {
       this.productsService.getProducts(this.categoryId).subscribe(products => {
         this.productList = products;
-        console.log(this.productList)
         this.filteredProducts = this.productList
       });
     }

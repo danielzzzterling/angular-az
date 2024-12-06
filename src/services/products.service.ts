@@ -19,6 +19,6 @@ export class ProductsService {
 
   // Obtener un producto por ID
   getProductByUrlSlug(urlSlug: string): Observable<any> {
-    return this.http.get<any>(`${environment.apiUrl}/products}/${urlSlug}`);
+    return this.http.get<any>(`${environment.apiUrl}/products/${urlSlug}`);
   }
   }

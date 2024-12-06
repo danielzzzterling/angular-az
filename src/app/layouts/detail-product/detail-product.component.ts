@@ -15,24 +15,36 @@ import { Product } from '../product-list/product-list.component';
 export class DetailProductComponent {
 
 
-  productUrlSlug: string = '';
   productData: Product = {} as Product 
 
   constructor(private route: ActivatedRoute, private productsService: ProductsService) {
 
   }
   ngOnInit(): void {
+
+    this.route.paramMap.subscribe(params => {
+      const urlSlugParam = params.get('urlSlug');
+      
+      // Asegúrate de que categoryIdParam tenga un valor y convertirlo a número
+      if (urlSlugParam) {
+        this.loadProduct(urlSlugParam);
+      } else {
+        console.error('categoryID not found in URL');
+      }
+    });
     
-    this.productUrlSlug = this.route.snapshot.paramMap.get('urlSlug')!;
-    console.log('Producto URL:', this.productUrlSlug);
     
-    this.productsService.getProductByUrlSlug(this.productUrlSlug).subscribe({
+    
+  }
+
+  loadProduct(productUrlSlug:string){
+    this.productsService.getProductByUrlSlug(productUrlSlug).subscribe({
       next: (productElementResponsive)=>{
         this.productData = productElementResponsive
-        console.log(productElementResponsive)
       },
       complete:()=>{},
       error: (e)=>{}
     })
-  }}
+  }
+}
 
