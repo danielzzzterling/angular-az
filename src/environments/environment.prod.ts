@@ -1,3 +1,3 @@
 export const environment = {
-    apiUrl: 'https://0s3dr1p5-10000.use.devtunnels.ms',
+    apiUrl: 'backendaz-emc4buhagya0e2f7.canadacentral-01.azurewebsites.net',
 }
