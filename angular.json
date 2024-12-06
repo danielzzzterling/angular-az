@@ -28,6 +28,7 @@
             "assets": [
               "src/assets",
               "src/favicon.ico",
+              "src/staticwebapp.config.json",
               {
                 "glob": "**/*",
                 "input": "public"
